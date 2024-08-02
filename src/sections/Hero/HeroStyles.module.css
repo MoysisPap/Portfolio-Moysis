@@ -109,3 +109,12 @@
     transform: translateY(-10px);
   }
 }
+
+.socialMediaIcon {
+  width: 30px;
+  transition: transform 250ms ease-in-out; 
+}
+
+.socialMediaIcon:hover {
+  transform: scale(1.2);
+}

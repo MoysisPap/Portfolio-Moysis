@@ -40,10 +40,10 @@ function Hero() {
         <h2>Frontend Developer</h2>
         <span>
           <a href="https://github.com/MoysisPap" target="_blank">
-            <img src={githubIcon} alt="Github icon" />
+            <img className={styles.socialMediaIcon} src={githubIcon} alt="Github icon" />
           </a>
           <a href="https://www.linkedin.com/in/moysis-papadopoulos/" target="_blank">
-            <img src={linkedinIcon} alt="Linkedin icon" />
+            <img className={styles.socialMediaIcon} src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
         <p className={styles.description}>
