@@ -9,6 +9,8 @@
 
   .hero {
     max-width: 200px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
   }
 
   span {
@@ -96,5 +98,14 @@
       max-width: 400px;
       width: 400px;
     }
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
