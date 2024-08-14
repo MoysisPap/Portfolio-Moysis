@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FlipCardStyles.module.css';
 
-function FlipCard({ src, link, h3, p, theme }) {
+function FlipCard({ src, liveLink, githubLink, h3, p, theme }) {
   return (
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner} data-theme={theme}>
@@ -12,8 +12,8 @@ function FlipCard({ src, link, h3, p, theme }) {
           <h3>{h3}</h3>
           <p>{p}</p>
           <div className={styles.flipCardButtons}>
-            <a href={link} className={styles.flipCardButton} target="_blank" rel="noopener noreferrer">Live Demo</a>
-            <a href={link} className={styles.flipCardButton} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href={liveLink} className={styles.flipCardButton} target="_blank" rel="noopener noreferrer">Live</a>
+            <a href={githubLink} className={styles.flipCardButton} target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -22,3 +22,5 @@ function FlipCard({ src, link, h3, p, theme }) {
 }
 
 export default FlipCard;
+
+

@@ -1,90 +1,111 @@
-/* Define default theme colors */
+/* src/common/FlipCardStyles.module.css */
+
+/* Define shadow colors for both themes */
 :root {
-    --flipCardBackLight: #0987f2; /* Light theme background color */
-    --flipCardBackDark: #ffffff; /* Dark theme background color */
-  }
-  
-  .flipCard {
-    background-color: transparent;
-    width: 240px; /* Adjust as needed */
-    height: 340px; /* Adjust as needed */
-    perspective: 1000px;
-    margin: 20px;
-  }
-  
-  .flipCardInner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    transform: rotateY(0deg); /* Always show 3D effect */
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* 3D effect shadow */
-  }
-  
-  .flipCard:hover .flipCardInner {
-    transform: rotateY(180deg); /* Flip effect */
-  }
-  
-  .flipCardFront,
-  .flipCardBack {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-  .flipCardFront {
-    background-color: #fff; /* Front color for visibility */
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .flipCardBack {
-    background-color: var(--flipCardBackLight); /* Default light theme color */
-    color: black;
-    transform: rotateY(180deg); /* Rotate to show the back side */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .flipCardInner[data-theme='dark'] .flipCardBack {
-    background-color: var(--flipCardBackDark); /* Dark theme background */
-  }
-  
-  .flipCardImage {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-  
-  .flipCardButtons {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .flipCardButton {
-    padding: 10px 20px;
-    border: none;
-    background-color: #fff;
-    color: #2980b9;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .flipCardButton:hover {
-    background-color: #2980b9;
-    color: #fff;
-  }
+  --flipCardBackLight: #d8eaff; /* Light theme background color */
+  --flipCardBackDark: #063e6e; /* Dark theme background color */
+  --flipCardShadowLight: rgba(0, 0, 0, 0.3); /* Light theme shadow color */
+}
+
+.flipCard {
+  background-color: transparent;
+  width: 240px; /* Adjust as needed */
+  height: 340px; /* Adjust as needed */
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg); /* Always show 3D effect */
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px var(--flipCardShadowLight); /* Default light theme shadow */
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg); /* Flip effect */
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.flipCardFront {
+  background-color: #fff; /* Front color for visibility */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipCardBack {
+  background-color: var(--flipCardBackLight); /* Default light theme color */
+  color: black;
+  transform: rotateY(180deg); /* Rotate to show the back side */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.flipCardButtons {
+  display: flex;
+  gap: 10px;
+  width: 100%; /* Make the buttons take the full width */
+  justify-content: space-between; /* Spread the buttons across the width */
+  margin-top: auto; /* Push the buttons to the bottom */
+}
+
+.flipCardButton {
+  padding: 8px 15px; /* Adjusted padding for uniform button size */
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none; /* Remove underline */
+  font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+  flex: 1; /* Make buttons equal in width */
+  text-align: center; /* Center text within the buttons */
+  background-color: #0987f2; /* Default background color */
+  color: #ffffff; /* Default text color */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.flipCardButton:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.flipCardButton:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+/* Dark theme styles */
+.flipCardInner[data-theme='dark'] .flipCardBack {
+  background-color: var(--flipCardBackDark); /* Dark theme background */
+}
+
+.flipCardInner[data-theme='light'] .flipCardButton {
+  background-color: #0987f2; /* Button color for light theme */
+  color: #ffffff; /* Text color for light theme */
+}
+
+.flipCardInner[data-theme='dark'] .flipCardButton {
+  background-color: #0987f2; /* Button color for dark theme */
+  color: #ffffff; /* Text color for dark theme */
+}
+
