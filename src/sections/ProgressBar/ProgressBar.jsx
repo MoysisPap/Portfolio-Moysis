@@ -3,22 +3,21 @@ import styles from './ProgressBarStyles.module.css';
 
 const ProgressBar = () => {
   useEffect(() => {
-    let progress = document.getElementById('progressbar');
+    const progressBar = document.getElementById('progressbar');
 
+    // Update the progress bar height based on scroll position
     function updateProgressBar() {
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-
-      if (totalHeight > 0) {
-        let progressHeight = (window.scrollY / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      } else {
-        progress.style.height = "0%";
-      }
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollTop = window.scrollY;
+      const progressHeight =
+        totalHeight > 0 ? (scrollTop / totalHeight) * 100 : 0;
+      progressBar.style.height = `${progressHeight}%`;
     }
 
     window.addEventListener('scroll', updateProgressBar);
-    updateProgressBar(); // Call it once when the component mounts
+    updateProgressBar(); // Initialize progress bar on component mount
 
+    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener('scroll', updateProgressBar);
     };
@@ -26,11 +25,17 @@ const ProgressBar = () => {
 
   return (
     <>
-      <div id="progressbar" className={styles.progressbar}></div>
-      <div className={styles.scrollPath}></div>
+      {/* Progress bar element */}
+      <div
+        id="progressbar"
+        className={styles.progressbar}
+        role="progressbar"
+        aria-label="Scroll progress"
+      ></div>
+      {/* Scroll path for visual effect */}
+      <div className={styles.scrollPath} aria-hidden="true"></div>
     </>
   );
 };
 
 export default ProgressBar;
-

@@ -12,6 +12,7 @@ import { useTheme } from '../../common/ThemeContext';
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
+  // Determine the icon sources based on the current theme
   const themeIcon = theme === 'light' ? sun : moon;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
@@ -19,15 +20,17 @@ function Hero() {
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
+        {/* Profile picture with alt text */}
         <img
           src={heroImg}
           className={styles.hero}
           alt="Profile picture of Moysis Papadopoulos"
         />
+        {/* Icon to toggle between light and dark themes */}
         <img
           className={styles.colorMode}
           src={themeIcon}
-          alt="Color mode icon"
+          alt="Color mode toggle icon"
           onClick={toggleTheme}
         />
       </div>
@@ -39,24 +42,34 @@ function Hero() {
         </h1>
         <h2>Frontend Developer</h2>
         <span>
-          <a href="https://github.com/MoysisPap" target="_blank">
+          {/* Link to GitHub profile */}
+          <a
+            href="https://github.com/MoysisPap"
+            target="_blank"
+            rel="noopener noreferrer" // Security enhancement for external links
+            aria-label="Visit GitHub profile"
+          >
             <img
               className={styles.socialMediaIcon}
               src={githubIcon}
-              alt="Github icon"
+              alt="GitHub icon"
             />
           </a>
+          {/* Link to LinkedIn profile */}
           <a
             href="https://www.linkedin.com/in/moysis-papadopoulos/"
             target="_blank"
+            rel="noopener noreferrer" // Security enhancement for external links
+            aria-label="Visit LinkedIn profile"
           >
             <img
               className={styles.socialMediaIcon}
               src={linkedinIcon}
-              alt="Linkedin icon"
+              alt="LinkedIn icon"
             />
           </a>
         </span>
+        {/* Link to download resume */}
         <a href={CV} download>
           <button className="hover">Resume</button>
         </a>

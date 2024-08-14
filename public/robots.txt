@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /private/         # Block any sensitive or non-public directories
+Disallow: /admin/           # Block any admin areas
+Disallow: /login/           # Block login or authentication pages
+
+# Allow everything else
+Disallow: 
+
+# Sitemap
+Sitemap: 

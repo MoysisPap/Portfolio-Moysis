@@ -3,8 +3,12 @@ import styles from './ContactStyles.module.css';
 function Contact() {
   return (
     <section id="contact" className={styles.container}>
+      {/* Main heading for the contact section */}
       <h1 className="sectionTitle">Contact</h1>
+
+      {/* Form for user contact */}
       <form action="https://formspree.io/f/xeojgawz" method="POST">
+        {/* Input field for the user's name */}
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
@@ -17,6 +21,8 @@ function Contact() {
             required
           />
         </div>
+
+        {/* Input field for the user's email */}
         <div className="formGroup">
           <label htmlFor="email" hidden>
             Email
@@ -29,6 +35,8 @@ function Contact() {
             required
           />
         </div>
+
+        {/* Text area for the user's message */}
         <div className="formGroup">
           <label htmlFor="message" hidden>
             Message
@@ -40,6 +48,8 @@ function Contact() {
             required
           ></textarea>
         </div>
+
+        {/* Submit button for the form */}
         <input className="hover btn" type="submit" value="Submit" />
       </form>
     </section>
