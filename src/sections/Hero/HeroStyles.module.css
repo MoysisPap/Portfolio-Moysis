@@ -8,7 +8,7 @@
   min-height: 500px;
 
   .hero {
-    max-width: 200px;
+    max-width: 250px;
     position: relative;
     animation: float 3s ease-in-out infinite;
   }
