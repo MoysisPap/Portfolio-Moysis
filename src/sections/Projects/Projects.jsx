@@ -21,7 +21,7 @@ function Projects() {
           liveLink="https://yennengaprogress.netlify.app/"
           githubLink="https://github.com/hyper-island-collaboration-work/yennenga-progress-group-3"
           h3="Yennenga Progress"
-          p="Real case project for a charity organization. Group project with UX designers made in React and Tailwind."
+          p="Real case project for a charity organization.Group project with UX designers made in React and Tailwind."
           theme={theme}
           aria-label="Yennenga Progress project card"
         />
