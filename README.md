@@ -27,7 +27,8 @@ Welcome to my personal portfolio website. This site highlights my skills, projec
 - **Deployment:** Netlify
 
 ## Live Website
-- **Visit my portfolio:** [https://moysis-papadopoulos.netlify.app/](https://moysis-papadopoulos.netlify.app/)
+- **Visit my portfolio:** <a href="https://moysis-papadopoulos.netlify.app/" target="_blank" rel="noopener noreferrer">https://moysis-papadopoulos.netlify.app/</a>
+
 
 ## License
 This project is open-source and available under the [MIT License](./LICENSE.txt).
