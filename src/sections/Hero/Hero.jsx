@@ -7,6 +7,7 @@ import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import CV from '../../assets/cv.pdf';
+import downloadIcon from '../../assets/downloadIcon.png';
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
@@ -40,7 +41,7 @@ function Hero() {
           <br />
           Papadopoulos
         </h1>
-        <h2>Frontend Developer</h2>
+        <h3>Frontend Developer</h3>
         <span>
           {/* Link to GitHub profile */}
           <a
@@ -71,7 +72,9 @@ function Hero() {
         </span>
         {/* Link to download resume */}
         <a href={CV} download>
-          <button className="hover">Resume</button>
+          <button className="hover">
+            Resume <img src={downloadIcon} alt="Download" />
+          </button>
         </a>
       </div>
     </section>

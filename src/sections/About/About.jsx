@@ -4,7 +4,7 @@ function About() {
   return (
     <section aria-labelledby="about-heading">
       <div className={styles.about}>
-        <h1 id="about-heading">Who Am I?</h1>
+        <h2 id="about-heading">Who Am I?</h2>
         <div className={styles.aboutInfo}>
           <p>
             Hi there! My name is Moysis Papadopoulos, and I&apos;ve been calling

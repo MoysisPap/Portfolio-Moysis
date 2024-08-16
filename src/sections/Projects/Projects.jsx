@@ -20,8 +20,8 @@ function Projects() {
           src={Yennenga}
           liveLink="https://yennengaprogress.netlify.app/"
           githubLink="https://github.com/hyper-island-collaboration-work/yennenga-progress-group-3"
-          h3="Yennenga Progress"
-          p="Real case project for a charity organization.Group project with UX designers made in React and Tailwind."
+          h4="Yennenga Progress"
+          p="Project for a charity organization.Built with a UX team using React and Tailwind (desktop)."
           theme={theme}
           aria-label="Yennenga Progress project card"
         />
@@ -29,8 +29,8 @@ function Projects() {
           src={HiddenGems}
           liveLink="https://hidden-gems-swe.netlify.app/"
           githubLink="https://github.com/MoysisPap/Hidden_Gems"
-          h3="Hidden Gems"
-          p="Explore hidden destinations in Sweden. Group project focusing on SEO, performance, and accessibility."
+          h4="Hidden Gems"
+          p="Explore hidden destinations in Sweden. Group project focused on SEO, performance, and accessibility."
           theme={theme}
           aria-label="Hidden Gems project card"
         />
@@ -38,8 +38,8 @@ function Projects() {
           src={HyperFlix}
           liveLink="https://hyperflix-site.netlify.app/"
           githubLink="https://github.com/MoysisPap/Hyperflix"
-          h3="HyperFlix"
-          p="Movie database with React. Contributed to ideation, layout, and component creation."
+          h4="HyperFlix"
+          p="Movie database built with React. Group project, contribution to ideation and component creation."
           theme={theme}
           aria-label="HyperFlix project card"
         />
@@ -47,8 +47,8 @@ function Projects() {
           src={NewYorkTimes}
           liveLink="https://90s-newspaper.netlify.app/"
           githubLink="https://github.com/MoysisPap/90-s-project"
-          h3="90's NY Times"
-          p="Retro newspaper about the biggest events of the 90's. Personal project using HTML and CSS."
+          h4="90's NY Times"
+          p="Retro newspaper showcasing major events of the 90s.Personal project built using HTML and CSS."
           theme={theme}
           aria-label="90's NY Times project card"
         />
@@ -56,8 +56,8 @@ function Projects() {
           src={TaskZilla}
           liveLink="https://to-do-app-pern.netlify.app/"
           githubLink="https://github.com/PoppyRed91/to-do-app-pern"
-          h3="TaskZilla"
-          p="To Do App using the PERN stack. Focused on backend and databases."
+          h4="TaskZilla"
+          p="To-Do App built with the PERN stack. Group project, focused on backend development and database management."
           theme={theme}
           aria-label="TaskZilla project card"
         />
@@ -65,8 +65,8 @@ function Projects() {
           src={DoomQuiz}
           liveLink="https://moysispap.github.io/Doom_Quiz/"
           githubLink="https://github.com/MoysisPap/Doom_Quiz"
-          h3="Doom Quiz"
-          p="Quiz about Greek Mythology. Team project to practice JS and API integration."
+          h4="Doom Quiz"
+          p="Quiz game about Greek Mythology. Team project focused on practicing JavaScript and API integration."
           theme={theme}
           aria-label="Doom Quiz project card"
         />
@@ -74,8 +74,8 @@ function Projects() {
           src={PAOK}
           liveLink="https://paok-news.netlify.app/"
           githubLink="https://github.com/MoysisPap/PAOK_news"
-          h3="PAOK News"
-          p="First coding project. Reflects early coding efforts and progress over time."
+          h4="PAOK News"
+          p="A website about football news. My first ever attempt to code, this is where everything started."
           theme={theme}
           aria-label="PAOK News project card"
         />

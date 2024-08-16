@@ -4,7 +4,7 @@ function Contact() {
   return (
     <section id="contact" className={styles.container}>
       {/* Main heading for the contact section */}
-      <h1 className="sectionTitle">Contact</h1>
+      <h2 className="sectionTitle">Contact</h2>
 
       {/* Form for user contact */}
       <form action="https://formspree.io/f/xeojgawz" method="POST">

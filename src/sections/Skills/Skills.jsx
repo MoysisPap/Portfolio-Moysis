@@ -11,7 +11,7 @@ function Skills() {
 
   return (
     <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
+      <h2 className="sectionTitle">Skills</h2>
       {/* Skill list section 1 */}
       <div className={styles.skillList}>
         <SkillList src={checkMarkIcon} skill="HTML" />

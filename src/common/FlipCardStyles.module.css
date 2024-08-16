@@ -2,6 +2,9 @@
   --flipCardBackLight: #d8eaff;
   --flipCardBackDark: #063e6e;
   --flipCardShadowLight: rgba(0, 0, 0, 0.3);
+  --flipCardShadowDark: rgba(0, 0, 0, 0.5);
+  --flipCardButtonColor: #0987f2;
+  --flipCardButtonTextColor: #ffffff;
 }
 
 .flipCard {
@@ -43,6 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 10px 20px var(--flipCardShadowLight);
 }
 
 .flipCardBack {
@@ -56,6 +60,12 @@
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
+  box-shadow: 0px 10px 20px var(--flipCardShadowDark);
+}
+
+.flipCardParagraph {
+  margin: auto 0;
+  text-align: center;
 }
 
 .flipCardButtons {
@@ -77,8 +87,8 @@
   font-family: 'Roboto Mono', monospace;
   flex: 1;
   text-align: center;
-  background-color: #0987f2;
-  color: #ffffff;
+  background-color: var(--flipCardButtonColor);
+  color: var(--flipCardButtonTextColor);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
 }
@@ -97,11 +107,11 @@
 }
 
 .flipCardInner[data-theme='light'] .flipCardButton {
-  background-color: #0987f2;
-  color: #ffffff;
+  background-color: var(--flipCardButtonColor);
+  color: var(--flipCardButtonTextColor);
 }
 
 .flipCardInner[data-theme='dark'] .flipCardButton {
-  background-color: #0987f2;
-  color: #ffffff;
+  background-color: var(--flipCardButtonColor);
+  color: var(--flipCardButtonTextColor);
 }

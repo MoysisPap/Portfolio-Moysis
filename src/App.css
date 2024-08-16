@@ -34,29 +34,32 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
-h2,
 h3,
+h4,
 p {
   font-family: 'Roboto Mono', monospace;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-transform: uppercase;
 }
 
-h2,
-h3 {
+h3,
+h4 {
   font-size: 20px;
 }
 
-h1 {
+h1,
+h2 {
   font-family: 'Rubik', sans-serif;
   font-size: 32px;
 }
@@ -78,11 +81,12 @@ p {
   #root {
     gap: 100px;
   }
-  h1 {
+  h1,
+  h2 {
     font-size: 40px;
   }
-  h2,
-  h3 {
+  h3,
+  h4 {
     font-size: 24px;
   }
   p {
@@ -97,7 +101,8 @@ p {
     #root {
       gap: 200px;
     }
-    h1 {
+    h1,
+    h2 {
       font-size: 48px;
     }
 
