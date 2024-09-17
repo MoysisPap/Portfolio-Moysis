@@ -5,7 +5,8 @@ import HyperFlix from '../../assets/HyperFlix.png';
 import NewYorkTimes from '../../assets/NYT-90s.png';
 import TaskZilla from '../../assets/TaskZilla.png';
 import DoomQuiz from '../../assets/DoomQuiz.png';
-import PAOK from '../../assets/PAOK.png';
+import PAOKnews from '../../assets/PAOKnews.png';
+import PAOKHub from '../../assets/PAOK-Hub.png';
 import FlipCard from '../../common/FlipCard';
 import { useTheme } from '../../common/ThemeContext';
 
@@ -16,12 +17,21 @@ function Projects() {
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
+      <FlipCard
+          src={PAOKHub}
+          liveLink="https://paok-hub.netlify.app/"
+          githubLink="https://github.com/MoysisPap/PAOK-Hub"
+          h4="PAOK-Hub"
+          p="PAOK project vol.2 Built in React and Tailwind. Statistics, Gallery, Merchandise."
+          theme={theme}
+          aria-label="PAOK-Hub project card"
+        />
         <FlipCard
           src={Yennenga}
           liveLink="https://yennengaprogress.netlify.app/"
           githubLink="https://github.com/hyper-island-collaboration-work/yennenga-progress-group-3"
           h4="Yennenga Progress"
-          p="Project for a charity organization.Built with a UX team using React and Tailwind (desktop)."
+          p="Project for a charity organization.Built with a UX team using React and Tailwind (Desktop version)."
           theme={theme}
           aria-label="Yennenga Progress project card"
         />
@@ -71,11 +81,11 @@ function Projects() {
           aria-label="Doom Quiz project card"
         />
         <FlipCard
-          src={PAOK}
+          src={PAOKnews}
           liveLink="https://paok-news.netlify.app/"
           githubLink="https://github.com/MoysisPap/PAOK_news"
           h4="PAOK News"
-          p="A website about football news. My first ever attempt to code, this is where everything started."
+          p="PAOK project vol.1 A website about football news. My first ever attempt to code, this is where everything started."
           theme={theme}
           aria-label="PAOK News project card"
         />
