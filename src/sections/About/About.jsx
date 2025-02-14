@@ -1,4 +1,4 @@
-import styles from './AboutStyles.module.css';
+import styles from "./AboutStyles.module.css";
 
 function About() {
   return (
@@ -8,19 +8,15 @@ function About() {
         <div className={styles.aboutInfo}>
           <p>
             Hi there! My name is Moysis Papadopoulos, and I&apos;ve been calling
-            Stockholm home for a few years now. I&apos;m new to Frontend
-            development and currently studying at Hyper Island.
+            Stockholm home for a few years now.
           </p>
           <p>
-            I&apos;ve always been curious about coding since I was young, but my
-            journey led me down different paths. With a degree in tourism and
-            experience as a Store Manager here in Stockholm, I&apos;ve gained
-            diverse skills and perspectives.
-          </p>
-          <p>
-            Now, I&apos;ve decided to switch careers and pursue something I
-            really enjoy! I am hungry to learn, ambitious to grow, and
-            determined to succeed!
+            {" "}
+            I enjoy building user-friendly web applications. My focus is on
+            clean, efficient code using JavaScript and React, with emphasis on
+            accessibility. I&apos;ve learned that strong teamwork is essential
+            for a company&apos;s success, and I enjoy contributing to that
+            collaborative environment.
           </p>
         </div>
       </div>
