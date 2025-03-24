@@ -1,11 +1,12 @@
-import styles from './FooterStyles.module.css';
+import styles from "./FooterStyles.module.css";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer id="footer" className={styles.container}>
-      {/* Footer content with copyright notice */}
       <p>
-        &copy; 2024 Moysis Papadopoulos. <br />
+        &copy; {currentYear} Moysis Papadopoulos. <br />
         All rights reserved.
       </p>
     </footer>
