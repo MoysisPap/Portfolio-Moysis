@@ -5,10 +5,7 @@ function Footer() {
 
   return (
     <footer id="footer" className={styles.container}>
-      <p>
-        &copy; {currentYear} Moysis Papadopoulos. <br />
-        All rights reserved.
-      </p>
+      <p>Designed & Built by Moysis Papadopoulos © {currentYear}</p>
     </footer>
   );
 }
