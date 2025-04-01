@@ -18,7 +18,7 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <FlipCard
           src={YWH}
-          liveLink="https://yourwayhome.eu/stockholm.html"
+          liveLink="https://moysispap.github.io/YourWayHome/"
           githubLink="https://github.com/MoysisPap/YourWayHome"
           h4="YourWayHome"
           p="Mapping and navigation service for safer commutes. Drop pins, rate locations, and provide feedback."
