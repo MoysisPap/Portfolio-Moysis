@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from "react";
 
 // Create a context for managing the theme
 const ThemeContext = createContext();
@@ -10,18 +10,18 @@ export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }) => {
   // Initialize theme from localStorage or default to 'dark'
   const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'dark'
+    () => localStorage.getItem("theme") || "dark"
   );
 
   useEffect(() => {
     // Update the data-theme attribute and localStorage
-    document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   // Toggle between 'light' and 'dark' themes
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (

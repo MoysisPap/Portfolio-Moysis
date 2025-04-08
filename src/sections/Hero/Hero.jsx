@@ -1,22 +1,22 @@
-import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/hero-img.webp';
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
-import githubLight from '../../assets/github-light.svg';
-import githubDark from '../../assets/github-dark.svg';
-import linkedinLight from '../../assets/linkedin-light.svg';
-import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/cv.pdf';
-import downloadIcon from '../../assets/downloadIcon.png';
-import { useTheme } from '../../common/ThemeContext';
+import styles from "./HeroStyles.module.css";
+import heroImg from "../../assets/hero-img.webp";
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
+import githubLight from "../../assets/github-light.svg";
+import githubDark from "../../assets/github-dark.svg";
+import linkedinLight from "../../assets/linkedin-light.svg";
+import linkedinDark from "../../assets/linkedin-dark.svg";
+import CV from "../../assets/cv.pdf";
+import downloadIcon from "../../assets/downloadIcon.png";
+import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
   // Determine the icon sources based on the current theme
-  const themeIcon = theme === 'light' ? sun : moon;
-  const githubIcon = theme === 'light' ? githubLight : githubDark;
-  const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const themeIcon = theme === "light" ? sun : moon;
+  const githubIcon = theme === "light" ? githubLight : githubDark;
+  const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
 
   return (
     <section id="hero" className={styles.container}>
@@ -31,8 +31,10 @@ function Hero() {
         <img
           className={styles.colorMode}
           src={themeIcon}
-          alt="Color mode toggle icon"
+          alt="Toggle color mode"
           onClick={toggleTheme}
+          role="button"
+          aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
         />
       </div>
       <div className={styles.info}>
@@ -47,33 +49,34 @@ function Hero() {
           <a
             href="https://github.com/MoysisPap"
             target="_blank"
-            rel="noopener noreferrer" // Security enhancement for external links
+            rel="noopener noreferrer"
             aria-label="Visit GitHub profile"
           >
             <img
               className={styles.socialMediaIcon}
               src={githubIcon}
-              alt="GitHub icon"
+              alt="GitHub profile"
             />
           </a>
           {/* Link to LinkedIn profile */}
           <a
             href="https://www.linkedin.com/in/moysis-papadopoulos/"
             target="_blank"
-            rel="noopener noreferrer" // Security enhancement for external links
+            rel="noopener noreferrer"
             aria-label="Visit LinkedIn profile"
           >
             <img
               className={styles.socialMediaIcon}
               src={linkedinIcon}
-              alt="LinkedIn icon"
+              alt="LinkedIn profile"
             />
           </a>
         </span>
         {/* Link to download resume */}
         <a href={CV} download>
           <button className="hover">
-            Resume <img src={downloadIcon} alt="Download" />
+            Resume{" "}
+            <img src={downloadIcon} alt="Download resume" aria-hidden="true" />
           </button>
         </a>
       </div>

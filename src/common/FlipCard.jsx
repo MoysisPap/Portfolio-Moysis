@@ -1,4 +1,4 @@
-import styles from './FlipCardStyles.module.css';
+import styles from "./FlipCardStyles.module.css";
 
 function FlipCard({ src, liveLink, githubLink, h4, p, theme }) {
   return (
@@ -7,7 +7,12 @@ function FlipCard({ src, liveLink, githubLink, h4, p, theme }) {
       <div className={styles.flipCardInner} data-theme={theme}>
         {/* Front side: Displays project image */}
         <div className={styles.flipCardFront}>
-          <img className={styles.flipCardImage} src={src} alt={`${h4} logo`} />
+          <img
+            className={styles.flipCardImage}
+            src={src}
+            alt={`${h4} logo`}
+            loading="lazy"
+          />
         </div>
 
         {/* Back side: Displays project details and links */}
@@ -21,6 +26,7 @@ function FlipCard({ src, liveLink, githubLink, h4, p, theme }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${h4} Live Site`}
+              role="button"
             >
               Live
             </a>
@@ -30,6 +36,7 @@ function FlipCard({ src, liveLink, githubLink, h4, p, theme }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${h4} GitHub Repository`}
+              role="button"
             >
               GitHub
             </a>
