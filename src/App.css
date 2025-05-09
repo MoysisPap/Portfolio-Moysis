@@ -8,7 +8,7 @@
   --footer-text-color: #888;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --background-color: #222;
   --btn-color: #0987f2;
   --btn-text-color: #ffffff;
@@ -41,10 +41,20 @@ p {
   padding: 0;
 }
 
+#jobTitle {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 h3,
 h4,
 p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 h1,
@@ -60,7 +70,7 @@ h4 {
 
 h1,
 h2 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 32px;
 }
 
@@ -85,6 +95,11 @@ p {
   h2 {
     font-size: 40px;
   }
+
+  #jobTitle {
+    font-size: 24px;
+  }
+
   h3,
   h4 {
     font-size: 24px;

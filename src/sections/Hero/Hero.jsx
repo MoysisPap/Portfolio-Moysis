@@ -43,7 +43,7 @@ function Hero() {
           <br />
           Papadopoulos
         </h1>
-        <h3>Frontend Developer</h3>
+        <span id="jobTitle">Frontend Developer</span>
         <span>
           {/* Link to GitHub profile */}
           <a
