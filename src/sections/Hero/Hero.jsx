@@ -31,10 +31,15 @@ function Hero() {
         <img
           className={styles.colorMode}
           src={themeIcon}
-          alt="Toggle color mode"
+          alt={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
           onClick={toggleTheme}
           role="button"
-          aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              toggleTheme();
+            }
+          }}
         />
       </div>
       <div className={styles.info}>
@@ -52,11 +57,7 @@ function Hero() {
             rel="noopener noreferrer"
             aria-label="Visit GitHub profile"
           >
-            <img
-              className={styles.socialMediaIcon}
-              src={githubIcon}
-              alt="GitHub profile"
-            />
+            <img className={styles.socialMediaIcon} src={githubIcon} alt="" />
           </a>
           {/* Link to LinkedIn profile */}
           <a
@@ -65,11 +66,7 @@ function Hero() {
             rel="noopener noreferrer"
             aria-label="Visit LinkedIn profile"
           >
-            <img
-              className={styles.socialMediaIcon}
-              src={linkedinIcon}
-              alt="LinkedIn profile"
-            />
+            <img className={styles.socialMediaIcon} src={linkedinIcon} alt="" />
           </a>
         </span>
         {/* Link to download resume */}

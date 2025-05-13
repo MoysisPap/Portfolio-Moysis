@@ -84,7 +84,7 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   flex: 1;
   text-align: center;
   background-color: var(--flipCardButtonColor);
@@ -102,16 +102,21 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.flipCardInner[data-theme='dark'] .flipCardBack {
+.flipCardInner[data-theme="dark"] .flipCardBack {
   background-color: var(--flipCardBackDark);
 }
 
-.flipCardInner[data-theme='light'] .flipCardButton {
+.flipCardInner[data-theme="light"] .flipCardButton {
   background-color: var(--flipCardButtonColor);
   color: var(--flipCardButtonTextColor);
 }
 
-.flipCardInner[data-theme='dark'] .flipCardButton {
+.flipCardInner[data-theme="dark"] .flipCardButton {
   background-color: var(--flipCardButtonColor);
   color: var(--flipCardButtonTextColor);
+}
+
+.flipCardButton:focus {
+  outline: 2px solid blue; /* Or your preferred focus style */
+  outline-offset: 2px; /* Optional: Adjust spacing */
 }
