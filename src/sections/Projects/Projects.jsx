@@ -1,3 +1,6 @@
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./ProjectsStyles.module.css";
 import Yennenga from "../../assets/Yennenga.png";
 import HiddenGems from "../../assets/hidden-gems.png";
@@ -9,11 +12,38 @@ import PAOKHub from "../../assets/PAOK-Hub.png";
 import FlipCard from "../../common/FlipCard";
 import { useTheme } from "../../common/ThemeContext";
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Projects() {
   const { theme } = useTheme();
+  const sectionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".sectionTitle",
+        { y: 40, opacity: 0, scale: 0.95 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".sectionTitle",
+            start: "top 85%",
+            end: "top 40%",
+            scrub: true,
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section id="projects" className={styles.container}>
+    <section id="projects" className={styles.container} ref={sectionRef}>
       <h2 className="sectionTitle">Projects</h2>
       <div className={styles.projectsContainer}>
         <article>
@@ -28,7 +58,6 @@ function Projects() {
             alt="Screenshot of YourWayHome project"
           />
         </article>
-
         <article>
           <FlipCard
             src={PAOKHub}
@@ -41,7 +70,6 @@ function Projects() {
             alt="Screenshot of PAOK-Hub project"
           />
         </article>
-
         <article>
           <FlipCard
             src={HiddenGems}
@@ -54,7 +82,6 @@ function Projects() {
             alt="Screenshot of Hidden Gems project"
           />
         </article>
-
         <article>
           <FlipCard
             src={TaskZilla}
@@ -67,7 +94,6 @@ function Projects() {
             alt="Screenshot of TaskZilla project"
           />
         </article>
-
         <article>
           <FlipCard
             src={Yennenga}
@@ -80,7 +106,6 @@ function Projects() {
             alt="Screenshot of Yennenga Progress project"
           />
         </article>
-
         <article>
           <FlipCard
             src={DoomQuiz}
@@ -93,7 +118,6 @@ function Projects() {
             alt="Screenshot of Doom Quiz project"
           />
         </article>
-
         <article>
           <FlipCard
             src={NewYorkTimes}

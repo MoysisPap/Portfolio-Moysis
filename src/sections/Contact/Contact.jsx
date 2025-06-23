@@ -1,8 +1,39 @@
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./ContactStyles.module.css";
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Contact() {
+  const sectionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".sectionTitle",
+        { y: 40, opacity: 0, scale: 0.95 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".sectionTitle",
+            start: "top 85%",
+            end: "top 40%",
+            scrub: true,
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="contact" className={styles.container}>
+    <section id="contact" className={styles.container} ref={sectionRef}>
       <h2 className="sectionTitle">Contact</h2>
       <form action="https://formspree.io/f/xeojgawz" method="POST">
         <div className="formGroup">
