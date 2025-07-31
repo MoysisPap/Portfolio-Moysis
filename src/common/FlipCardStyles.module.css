@@ -1,6 +1,10 @@
 :root {
-  --flipCardBackLight: #d8eaff;
+  --flipCardBackLight: rgb(192, 226, 255);
   --flipCardBackDark: #063e6e;
+  --flipCardFrontLight: #97ceff;
+  --flipCardFrontDark: #ffffff;
+  --flipCardTextLight: black;
+  --flipCardTextDark: white;
   --flipCardShadowLight: rgba(0, 0, 0, 0.3);
   --flipCardShadowDark: rgba(0, 0, 0, 0.5);
   --flipCardButtonColor: #0987f2;
@@ -8,7 +12,7 @@
 }
 
 .flipCard {
-  background-color: transparent;
+  background: transparent;
   width: 240px;
   height: 340px;
   perspective: 1000px;
@@ -23,7 +27,7 @@
   transform-style: preserve-3d;
   transform: rotateY(0deg);
   border-radius: 10px;
-  box-shadow: 0px 10px 20px var(--flipCardShadowLight);
+  box-shadow: 0 10px 20px var(--flipCardShadowLight);
 }
 
 .flipCard:hover .flipCardInner {
@@ -38,29 +42,26 @@
   backface-visibility: hidden;
   border-radius: 10px;
   box-sizing: border-box;
-}
-
-.flipCardFront {
-  background-color: #fff;
-  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 10px 20px var(--flipCardShadowLight);
+}
+
+.flipCardFront {
+  background: var(--flipCardFrontLight);
+  color: var(--flipCardTextLight);
+  box-shadow: 0 10px 20px var(--flipCardShadowLight);
 }
 
 .flipCardBack {
-  background-color: var(--flipCardBackLight);
-  color: black;
+  background: var(--flipCardBackLight);
+  color: var(--flipCardTextLight);
   transform: rotateY(180deg);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   padding: 20px;
-  box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 0px 10px 20px var(--flipCardShadowDark);
+  box-shadow: 0 10px 20px var(--flipCardShadowDark);
 }
 
 .flipCardParagraph {
@@ -77,17 +78,14 @@
 }
 
 .flipCardButton {
+  flex: 1;
   padding: 8px 15px;
   border: none;
   cursor: pointer;
   border-radius: 15px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-  font-family: "Roboto Mono", monospace;
-  flex: 1;
+  font: bold 15px "Roboto Mono", monospace;
   text-align: center;
-  background-color: var(--flipCardButtonColor);
+  background: var(--flipCardButtonColor);
   color: var(--flipCardButtonTextColor);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
@@ -102,21 +100,20 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+/* Theme overrides */
+.flipCardInner[data-theme="dark"] .flipCardFront {
+  background: var(--flipCardFrontDark);
+  color: var(--flipCardTextDark);
+  box-shadow: 0 10px 20px var(--flipCardShadowDark);
+}
+
 .flipCardInner[data-theme="dark"] .flipCardBack {
-  background-color: var(--flipCardBackDark);
+  background: var(--flipCardBackDark);
+  color: var(--flipCardTextDark);
 }
 
-.flipCardInner[data-theme="light"] .flipCardButton {
-  background-color: var(--flipCardButtonColor);
-  color: var(--flipCardButtonTextColor);
-}
-
-.flipCardInner[data-theme="dark"] .flipCardButton {
-  background-color: var(--flipCardButtonColor);
-  color: var(--flipCardButtonTextColor);
-}
-
-.flipCardButton:focus {
-  outline: 2px solid blue; /* Or your preferred focus style */
-  outline-offset: 2px; /* Optional: Adjust spacing */
+.flipCardImage {
+  height: 50%;
+  width: 80%;
+  object-fit: contain;
 }
