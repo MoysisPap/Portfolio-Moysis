@@ -1,7 +1,7 @@
 :root {
-  --flipCardBackLight: rgb(192, 226, 255);
+  --flipCardBackLight: #dbeeff;
   --flipCardBackDark: #063e6e;
-  --flipCardFrontLight: #97ceff;
+  --flipCardFrontLight: #b4dcff;
   --flipCardFrontDark: #ffffff;
   --flipCardTextLight: black;
   --flipCardTextDark: white;
